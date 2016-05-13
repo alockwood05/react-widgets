@@ -8,10 +8,12 @@
   "parser": "babel-eslint",
 
   "plugins": [
-    "babel"
+    "babel",
+    "react"
   ],
 
   "ecmaFeatures": {
+    "jsx": true,
     "arrowFunctions": true, // enable arrow functions
     "binaryLiterals": true, // enable binary literals
     "blockBindings": true, // enable let and const (aka block bindings)
