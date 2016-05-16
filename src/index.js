@@ -1,11 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+// React needs to be on this page for the react babelifying to work, global React would work too
+import  React from 'react';
+import  ReactDOM from 'react-dom';
+import HelloWorld from './hello-world/index.jsx';
 
-var Hello = React.createClass({
-  render: function () {
-    return (
-      <div>Hello ReactJS Program!</div>
-    )
-  }
-});
+
+/* render the hello world component */
+ReactDOM.render(<HelloWorld />, document.getElementById('hello-world'));
 
