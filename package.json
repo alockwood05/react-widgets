@@ -7,6 +7,9 @@
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
   },
+  "ava": {
+    "babel": "inherit"
+  },
   "devDependencies": {
     "ava": "^0.14.0",
     "babel-core": "^6.8.0",
@@ -17,12 +20,17 @@
     "babel-preset-stage-3": "^6.5.0",
     "eslint": "^2.9.0",
     "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-react": "^5.1.1",
     "html-webpack-plugin": "^2.16.1",
+    "jsdom": "^9.1.0",
+    "nyc": "^6.4.4",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "ava 'test/**/*.spec.js' --verbose --require ./test/setup.js",
+    "test": "ava 'src/**/*.test.js' --verbose --require ./setup-tests.js",
+    "lint": "node_modules/eslint/bin/eslint.js src/**/*",
+    "watch:test": "npm test -- --watch",
     "build": "webpack",
     "start": "webpack-dev-server"
   },
